@@ -1,4 +1,4 @@
-Ôªø
+
 
 #### Ruby: `mixins`
 acole
@@ -53,8 +53,8 @@ class EightTrack
 end
 ph = Phonograph.new("West End Blues")
 et = EightTrack.new("Surrealistic Pillow")
-ph.whoAmI?	¬ª	"Phonograph (#537766170): West End Blues"
-et.whoAmI?	¬ª	"EightTrack (#537765860): Surrealistic Pillow"
+ph.whoAmI?	ª	"Phonograph (#537766170): West End Blues"
+et.whoAmI?	ª	"EightTrack (#537765860): Surrealistic Pillow"
 ```
 
 Mixins give you a wonderfully controlled way of adding functionality to classes. However, their true power comes out when the code in the mixin starts to interact with code in the class that uses it. Let's take the standard Ruby mixin Comparable as an example. The Comparable mixin can be used to add the comparison operators (<, <=, ==, >=, and >), as well as the method between?, to a class. For this to work, Comparable assumes that any class that uses it defines the operator <=>. So, as a class writer, you define the one method, <=>, include Comparable, and get six comparison functions for free. Let's try this with our Song class, by making the songs comparable based on their duration. All we have to do is include the Comparable module and implement the comparison operator <=>.
@@ -71,9 +71,9 @@ end
 ```
 song1 = Song.new("My Way",  "Sinatra", 225)
 song2 = Song.new("Bicylops", "Fleck",  260)
-song1 <=> song2	¬ª	-1
-song1  <  song2	¬ª	true
-song1 ==  song1	¬ª	true
+song1 <=> song2	ª	-1
+song1  <  song2	ª	true
+song1 ==  song1	ª	true
 song1  >  song2
 ```
 --
@@ -169,7 +169,7 @@ arthurfc
 Before to introduce Numeric class, let's check out the figure for Ruby data type. All of the class are from Object Class. There are the Numeric class and sub-class.
 
 # Integer (Fixnum and Bignum)
-Two dat type for integer : Fixnum and Bignum„ÄÇ
+Two dat type for integer : Fixnum and Bignum?
 The following arithmetic show the , e.g.,
 
 
@@ -212,9 +212,9 @@ puts 2.zero?     #false
 # Float
 
 
-puts 10 / 3     #3Ôºåthe two numbers are Fixnum
+puts 10 / 3     #3,the two numbers are Fixnum
  
-make either dividend or divisor to be FloatÔºåRuby can process the result
+make either dividend or divisor to be Float,Ruby can process the result
 
 puts 10.0 / 3     #3.3333333333333
 
@@ -274,10 +274,10 @@ BigDecimal provides similar support for very large or very accurate floating poi
 
 42**13 -> 1265437718438866624512
 
-Decimal arithmetic is also useful for general calculation, because it provides the correct answers people expect‚Äìwhereas normal binary floating point arithmetic often introduces subtle errors because of the conversion between base 10 and base 2. For example,
+Decimal arithmetic is also useful for general calculation, because it provides the correct answers people expectñwhereas normal binary floating point arithmetic often introduces subtle errors because of the conversion between base 10 and base 2. For example,
 
 
-(BigDecimal.new(‚Äú1.2‚Äù) - BigDecimal(‚Äú1.0‚Äù)) == BigDecimal(‚Äú0.2‚Äù) -> true
+(BigDecimal.new(ì1.2î) - BigDecimal(ì1.0î)) == BigDecimal(ì0.2î) -> true
 
 (1.2 - 1.0) == 0.2 -> false
 
@@ -460,7 +460,7 @@ end
 
 The constants of Module are named similar to the class constants with an uppercase letter. The methods of module are defined in the same way 
 as class methods. Below is an example of modules, which has a constant PI and two module methods. We call the module method by preceding the 
-method‚Äôs name with the module‚Äôs name and a period, e.g. Area.round(r) . To access constants, we call the module constant using the module name, 
+methodís name with the moduleís name and a period, e.g. Area.round(r) . To access constants, we call the module constant using the module name, 
 two colons, and the constant name. e.g. Area::PI.
 
 When & How Modules are Used?
@@ -507,10 +507,10 @@ end
 ```
 
 If a third program wants to use these modules, it can simply load the two files using the Ruby require statement, and reference the qualified names. 
-The Ruby require statement is similar to the import statement of Java and the include statement of C and C++. It does not matter using require ‚Äúarea.rb‚Äù or require ‚Äúarea.‚Äù
+The Ruby require statement is similar to the import statement of Java and the include statement of C and C++. It does not matter using require ìarea.rbî or require ìarea.î
 ```
-require ‚Äúarea.rb‚Äù
-require ‚Äúshape‚Äù
+require ìarea.rbî
+require ìshapeî
 
 x = Area.round(1)
 fact = Shape.round(Shape::YES)
@@ -523,12 +523,12 @@ Like Java, Ruby does not support multiple inheritances directly. However, Ruby M
 In the namespace section, we defined module methods whose names are prefixed by the module name. There is another way to define methods in modules 
 without prefixing of module name. 
 In the previous section's examples, we defined module methods, methods whose names were prefixed by the module name. If this made you think of class methods, 
-your next thought might well be ‚Äúwhat happens if I define instance methods within a module?‚Äù Good question. A module can't have instances, because a module isn't a class. 
+your next thought might well be ìwhat happens if I define instance methods within a module?î Good question. A module can't have instances, because a module isn't a class. 
 However, you can include a module within a class definition. When this happens, all the module's instance methods are suddenly available as methods in the class as well. 
 They get mixed in. In fact, mixed-in modules effectively behave as superclasses.
 
 Problem
-Modules are part of what makes Ruby‚Äôs design beautiful. However, since they do not have a direct analogy in any mainstream programming language, it is easy to get a bit confused about what they should be used for.
+Modules are part of what makes Rubyís design beautiful. However, since they do not have a direct analogy in any mainstream programming language, it is easy to get a bit confused about what they should be used for.
 
 Conclusion
 
@@ -1183,7 +1183,7 @@ Finally, for constructors since Dart is an optionally typed language where all a
 ```javascript
 class FluffyBunny {
 FluffyBunny.fromXml(String xml) {
-// ‚Ä¶
+// Ö
 }
 
 FluffyBunny.fromJson(String json) {
@@ -1225,7 +1225,7 @@ Symbol._internal(this.name);
 ##Operator Overloading
 Operators in Dart are the same operators as those in most languages but the difference in Dart is these operators can be overwritten.  Similar to overriding the toString() method for the Person class we can also redefine the meaning of common operators for manipulating the class instances.
 
-"This means that you can also override (most) operators for your own types.  That being said, please don‚Äôt go crazy with this. We‚Äôre giving you the keys to the car and trusting that you won‚Äôt turn around and drive it through the living room." - [dartlang.org]
+"This means that you can also override (most) operators for your own types.  That being said, please donít go crazy with this. Weíre giving you the keys to the car and trusting that you wonít turn around and drive it through the living room." - [dartlang.org]
 
 | <  | +  | &#124; | [] |
 |----|----|----|-----|
@@ -1361,7 +1361,7 @@ SQL is a simple but powerful language for working with relational database syste
 adebaca
 
 
-A ‚ÄúOPERATOR‚Äù in SQL is a reserved word or a character that is used primarily in an SQL statement‚Äôs WHERE clause to perform some type of operation, such as comparisons and arithmetic operations.
+A ìOPERATORî in SQL is a reserved word or a character that is used primarily in an SQL statementís WHERE clause to perform some type of operation, such as comparisons and arithmetic operations.
 
 Operators are used in special conditions in SQL statements and to serve as conjunctions for multiple conditions in a statement.
 
@@ -1380,7 +1380,7 @@ Operators used to negate conditions
 	
 - Subtraction-Subtracts right hand operand from left hand operand
 
-‚Ä¢ Multiplication-Multiplies values on either side of the operator
+ï Multiplication-Multiplies values on either side of the operator
 
 /  Division-Divides left hand operand by right hand operand
 
@@ -1465,16 +1465,16 @@ WHERE [condition];
 A view can be updated under certain conditions:
 
 ```
-‚Ä¢ The SELECT clause may not contain the keyword DISTINCT.
-‚Ä¢ The SELECT clause may not contain summary functions.
-‚Ä¢ The SELECT clause may not contain set functions.
-‚Ä¢ The SELECT clause may not contain set operators.
-‚Ä¢ The SELECT clause may not contain an ORDER BY clause.
-‚Ä¢ The FROM clause may not contain multiple tables.
-‚Ä¢ The WHERE clause may not contain subqueries.
-‚Ä¢ The query may not contain GROUP BY or HAVING.
-‚Ä¢ Calculated columns may not be updated.
-‚Ä¢ All NOT NULL columns from the base table must be included in the view in order for the INSERT query to function.
+ï The SELECT clause may not contain the keyword DISTINCT.
+ï The SELECT clause may not contain summary functions.
+ï The SELECT clause may not contain set functions.
+ï The SELECT clause may not contain set operators.
+ï The SELECT clause may not contain an ORDER BY clause.
+ï The FROM clause may not contain multiple tables.
+ï The WHERE clause may not contain subqueries.
+ï The query may not contain GROUP BY or HAVING.
+ï Calculated columns may not be updated.
+ï All NOT NULL columns from the base table must be included in the view in order for the INSERT query to function.
 ```
 
 ####Inserting Rows into a View:
@@ -1490,7 +1490,7 @@ DROP VIEW view_name;
 ```
 
 ##### Conclusion
-SQL has many uses this day and age and I don‚Äôt think it‚Äôs going to be going away anytime soon. Most of the old database systems are built off SQL, and I feel that NOSQL is not going to take over anytime soon. Knowing basic SQL queries is a key to any programming language and every programmer should have a basic understanding of it. 
+SQL has many uses this day and age and I donít think itís going to be going away anytime soon. Most of the old database systems are built off SQL, and I feel that NOSQL is not going to take over anytime soon. Knowing basic SQL queries is a key to any programming language and every programmer should have a basic understanding of it. 
 
 
 
@@ -1740,7 +1740,7 @@ class Test
 {
 	static void Main()
 {
-	ThisIsAClass example = new ThisIsAClass(‚ÄúAlright!‚Äù);
+	ThisIsAClass example = new ThisIsAClass(ìAlright!î);
 	Console.WriteLine(example.aString);
 
 }
@@ -2102,4 +2102,52 @@ jpack
 
 --
 
+#### Scala: `Pattern Matching`
+btombari
 
+*Scala is a programming language which uses the JVM
+*Scala is very similar to Java, but is a fully functional language and also contains additional features
+*Pattern matching in Scala is structured like a switch-case statement in Java.
+	-
+```
+object Example1 {
+	def main(args: Array[String]) {
+		println(patternMatch(3))
+	}
+	def patternMatch(x: Int) : String = x match {
+		case 1 => "One"
+		case 2 => "Two"
+		case 3 => "Three"
+		case 4 => "Four"
+		case 5 => "Five"
+		case 6 => "Six"
+		case 7 => "Seven"
+		case 8 => "Eight"
+		case 9 => "Nine"
+		case _ => "Not A Number"
+	}
+}
+```
+
+*The => operator separates the pattern from the expression.
+*The matched case will return the expression.
+*Underscore serves as the default for any pattern which does not fit the cases above it(primitive data types).
+*Scala calls toString and equals methods automatically.
+*Scala allows or using arbitrary data types in pattern matching
+
+```
+object Example2 {
+	def main(args: Array[String]) {
+		val johnS = new Person("John", "Smith")
+		val JohnD = new Person("John", "Davis")
+		
+		for(person <- list(johnS, johnD)) {
+			person match {
+				case Person("John", "Smith") => println("True")
+				case Person(First, Last) => println("Unknown person " + First + " " + Last)
+			}
+		}
+	}
+	case class Person(First: String, Last: String)
+}
+```
